@@ -6,8 +6,11 @@
 
 @section('content')
     <h1>Movies</h1> 
-    {{$titolo}}
-    {{$autore}}
+    {{$movies['titolo']}}
+    <br>    
+    {{$movies['autore']}}
+    <br>
+    {{$movies['data']}}
 @endsection
 
 

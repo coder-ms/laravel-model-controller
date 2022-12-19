@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 
 Route::get('/movies', function () {
-    $movies = ['titolo' => 'titolo 1', 'autore' => 'autore 1'];
+    $movies = ['titolo' => 'titolo 1', 'autore' => 'autore 1', 'data' => 'data 1'];
     //DATA DUMP
-    //dd($movies); 
-    return view('pages.movies', $movies);
+    //dd(compact('movies')); 
+    return view('pages.movies',  compact('movies'));
 });
 
 /*
