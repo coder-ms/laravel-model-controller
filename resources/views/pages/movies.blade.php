@@ -6,11 +6,14 @@
 
 @section('content')
     <h1>Movies</h1> 
-    {{$movies['titolo']}}
-    <br>    
-    {{$movies['autore']}}
-    <br>
-    {{$movies['data']}}
+    <ul>
+        @forelse ($movies as $key=>$movie)
+            <li>{{$movie->title}}-{{$key}}</li>
+        @empty
+            <li>NO movie</li>
+        @endforelse
+    </ul>
+
 @endsection
 
 

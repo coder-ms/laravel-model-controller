@@ -1,5 +1,6 @@
 <?php
 //use App\Http\Controllers\Guest\PageController;
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PageController::class, 'index'])->name('home');
 
+Route::get('/movies', [PageController::class, 'getMovies'])->name('movies');
 
+/*
 Route::get('/movies', function () {
-    $movies = ['titolo' => 'titolo 1', 'autore' => 'autore 1', 'data' => 'data 1'];
-    //DATA DUMP
-    //dd(compact('movies')); 
-    return view('pages.movies',  compact('movies'));
-});
 
+})->name('movies');
+*/
 /*
 function () {
     return view('home');
