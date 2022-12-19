@@ -8,8 +8,6 @@
     <h1>Movies</h1> 
     {{$titolo}}
     {{$autore}}
-    {{$data}}
-
 @endsection
 
 
